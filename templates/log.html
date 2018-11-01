@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block body_block %}
+<h1>LOG 입니다.</h1>
+    
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">소환사이름</th>
+      <th scope="col">승</th>
+      <th scope="col">패</th>
+      <th scope="col">검색시간</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    {% for log in logs %}  
+    <tr>
+      <!--<th scope="row">1</th>-->
+      <td>{{log[0]}}</td>
+      <td>{{log[1]}}</td>
+      <td>{{log[2]}}</td>
+      <td>{{log[3]}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  
+</table>
+{% endblock %}
